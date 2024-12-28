@@ -1,6 +1,9 @@
+import axios from "axios";
 import PropTypes from "prop-types";
+import Swal from "sweetalert2";
+import { MdDelete } from "react-icons/md";
 
-const RecTable = ({rec}) => {
+const RecTable = ({ rec, myRec ,setMyRec }) => {
     // {
     //     "_id": "676e8008992ff0ff8365e933",
     //     "recommendationTitle": "efqwewedfef",
@@ -15,12 +18,43 @@ const RecTable = ({rec}) => {
     //     "recommendersEmail": "omuk@tomuk.com",
     //     "createdAt": "2024-12-27T10:23:04.278Z"
     //   }
-    const {queryTitle , queryAuthorName , createdAt , recommendedProduct , recommendationReason , queryPhoto} = rec ;
+
+    const { queryTitle, queryAuthorName, createdAt, recommendedProduct, recommendationReason, queryPhoto, _id, } = rec;
+
+    const handleDelete = (id) => {
+
+        try {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "It won't be deleted from others feed !",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then(async (result) => {
+                if (result.isConfirmed) {
+                    const { data } = await axios.delete(`${import.meta.env.VITE_API_URL}/recommendation/${id}`)
+                    if (data.deletedCount) {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+
+                        const remaining = myRec.filter(rec => rec._id !== id) ; 
+                        setMyRec(remaining) ; 
+                    }
+                }
+            });
+        }
+        catch(err){
+            console.log(err.message);
+        }       
+    }
+
     return (
         <tr>
-            <th>
-               
-            </th>
             <td>
                 <div className="flex items-center gap-3">
                     <div className="avatar">
@@ -38,18 +72,20 @@ const RecTable = ({rec}) => {
             <td>
                 {recommendedProduct}
                 <br />
-                <span className="badge badge-ghost badge-sm">{recommendationReason.slice(0,9)}</span>
+                <span className="badge badge-ghost badge-sm">{recommendationReason.slice(0, 9)}</span>
             </td>
             <td>{createdAt}</td>
             <th>
-                <button className="btn btn-ghost btn-xs">Delete</button>
+                <button onClick={() => handleDelete(_id)} className="btn btn-ghost text-xl"><MdDelete /></button>
             </th>
         </tr>
     );
 };
 
 RecTable.propTypes = {
-    rec : PropTypes.object.isRequired ,
+    rec: PropTypes.object.isRequired,
+    setMyRec : PropTypes.func,
+    myRec : PropTypes.array ,
 }
 
 export default RecTable;

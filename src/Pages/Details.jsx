@@ -13,7 +13,6 @@ const Details = () => {
     const navigate = useNavigate() ;
 
     const { title, recommendCount, productImage, product, brand, avoid, author, _id } = query;
-    console.log(recommendations , user);
 
     // fetch a specific data for a query
 
@@ -69,8 +68,8 @@ const Details = () => {
     }
 
     return (
-        <div className="flex flex-col md:flex-row justify-between w-11/12 mx-auto gap-32">
-            <div className="my-36 w-10/12 md:w-full mx-auto border-2 rounded-3xl bg-cyan-800">
+        <div className="flex flex-col md:flex-row justify-between w-11/12 mx-auto md:gap-32">
+            <div className="my-12 md:my-36 w-full mx-auto border-2 rounded-3xl bg-cyan-800">
                 <div className="flex items-center text-white rounded-3xl">
                     <div className="my-8">
                         <img src={productImage} />
@@ -92,7 +91,16 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleRecommendation} className="w-11/12 mx-auto my-8">
+                <div className="my-12 md:w-11/12 mx-auto border-t md:border mg:rounded-3xl">
+                <h1 className="my-2 md:my-8 text-base-200 text-lg md:text-2xl font-semibold text-center">Recommendations For this Query : {recommendations.length}</h1>
+                <div className="md:mt-4">
+                    {
+                        recommendations.map((rec, idx) => <Recommendation key={idx} rec={rec}></Recommendation>)
+                    }
+                </div>
+            </div>
+            </div>
+             <form onSubmit={handleRecommendation} className="w-11/12 mx-auto my-12 md:my-36 md:w-6/12 ">
                     <div className="md:flex space-y-4 md:space-y-0 gap-4 mb-6">
                         <label className="mb:4 input border-cyan-800/80  flex items-center gap-2 w-full">
                             <input type="text" className="grow" placeholder="Recommendation Title" name="title" />
@@ -113,15 +121,6 @@ const Details = () => {
                     </div>
                     <button className="btn btn-block bg-cyan-800/80 hover:bg-cyan-800 text-base-100">Recommend</button>
                 </form>
-            </div>
-            <div className="my-36 w-10/12 md:w-6/12 mx-auto border-2 rounded-3xl">
-                <h1 className="my-4 md:my-8 text-cyan-800 text-xl md:text-2xl font-semibold text-center">Recommendations For this Query : {recommendations.length}</h1>
-                <div className="mt-4">
-                    {
-                        recommendations.map((rec, idx) => <Recommendation key={idx} rec={rec}></Recommendation>)
-                    }
-                </div>
-            </div>
         </div>
     );
 };

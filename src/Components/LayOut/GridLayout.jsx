@@ -66,7 +66,7 @@ const GridLayout = ({ query , myPostedQueries , setMyPostedQueries }) => {
                 <h2 className="card-title">{title}</h2>
                 <p>Recommended By : {recommendCount} </p>
                 <div className= "flex justify-between">
-                    <Link to={`/details/${_id}`} className="btn bg-gray-700 text-white"><span className="text-sm font-bold">Details</span> <MdMore /></Link>
+                    <Link to={`/details/${_id}`} className="btn bg-gray-700 text-white"><span className="text-sm font-bold">{location.pathname === "/queries" ? <p>Recommend</p> : <p>Details</p>}</span> <MdMore /></Link>
                     <button className={location.pathname === "/queries" ? "hidden": "btn" }><Link className="btn bg-gray-700 text-white"><span className="text-sm font-bold">Edit</span><FaEdit /></Link></button>
                     <button onClick={() => handleDelete(_id)} className={ location.pathname === "/queries" ? "hidden" : "btn bg-gray-700 text-white"}><span className="text-sm font-bold">Delete</span><MdDelete /></button>
                 </div>

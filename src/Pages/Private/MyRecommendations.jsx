@@ -22,18 +22,12 @@ const MyRecommendations = () => {
         <div>
             <div>
                 <h1 className="text-center my-8 md:my-16 text-2xl md:text-4xl ">My Recommendations : {myRec.length}</h1>
-
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
                             <th>Query</th>
                             <th>My Recommendation</th>
                             <th>Date</th>
@@ -42,7 +36,7 @@ const MyRecommendations = () => {
                     </thead>
                     <tbody>
                         {
-                            myRec.map(rec => <RecTable key={rec._id} rec={rec}></RecTable>)
+                            myRec.map(rec => <RecTable key={rec._id} rec={rec} myRec={myRec} setMyRec={setMyRec}></RecTable>)
                         }
                     </tbody>
                 </table>
