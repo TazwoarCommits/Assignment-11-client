@@ -27,7 +27,8 @@ const router = createBrowserRouter([
         },
         {
           path : "/details/:id" , 
-          element : <Details></Details>
+          element : <Details></Details>,
+          loader : ({params}) => fetch(`${import.meta.env.VITE_API_URL}/recommendation/query/${params.id}`)
         },
         {
           path : "/post",

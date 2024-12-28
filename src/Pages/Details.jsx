@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import AuthContext from "../Context/AuthContext/AuthContext";
 import Swal from "sweetalert2";
 
@@ -8,16 +8,20 @@ const Details = () => {
     const {user} = useContext(AuthContext) ;
     const { id } = useParams();
     const [query, setQuery] = useState({});
+    const recommendations = useLoaderData() ;
 
     const { title, recommendCount, productImage, product, brand, avoid, author , _id} = query;
+    console.log(recommendations);
+
+    // fetch a specific data for a query
 
     useEffect(() => {
-        fetchAQueries()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        fetchAQueries() ;
+        // eslint-disable-next-line react-hooks/exhaustive-deps     
     }, []) ;
 
     const fetchAQueries = async () => {
-        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/queries/${id}`)
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/queries/${id}`) ;
         setQuery(data);
     } ;
 
