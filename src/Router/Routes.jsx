@@ -39,15 +39,15 @@ const router = createBrowserRouter([
           element : <PrivateRoute><MyQueries></MyQueries></PrivateRoute>
         },
         {
-          path : "my-recommendations" , 
+          path : "/my-recommendations" , 
           element : <MyRecommendations></MyRecommendations>
         },
         {
-          path : "register",
+          path : "/register",
           element : <Register></Register>
         },
         {
-          path : "login" ,
+          path : "/login" ,
           element : <Login></Login>
         }
       ]
