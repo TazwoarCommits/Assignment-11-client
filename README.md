@@ -1,8 +1,22 @@
-# React + Vite
+# Ask-Me : Assignment-11-Category-9
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**_Ask me_**  is a product recommendation platform,,,,, where users can post their Query about a product and other can suggest him/her according to experience or knowledge which helps users to make the best decision to buy a product or not,,,,, 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Used Techonologies :  
+
+* HTML
+* CSS
+* Tailwind
+* Daisy UI
+* Js, Jsx
+* React
+* React Router Development
+* Firebase 
+* MongoDb Atlas
+* Some npm packages
+
+
+ ## Get [*_Ask-Me_*](https://equisports.netlify.app) 
+ ## Get [*_Api_*](https://ask-me-query-server.vercel.app/queries) 
+

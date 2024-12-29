@@ -64,7 +64,7 @@ const GridLayout = ({ query, myPostedQueries, setMyPostedQueries }) => {
       }, []);
 
     return (
-        <div  data-aos="flip-up" className= "card card-compact mb:16 md:mb-24 bg-base-100 justify-items-center max-w-80 md:max-w-96 shadow-xl">
+        <div  data-aos="flip-up" className= "card card-compact mb:16 md:mb-24 bg-base-100 justify-items-center max-w-80 md:w-96 shadow-xl">
             <figure>
                 <img className="w-full h-[220px] md:h-[300px]"
                     src={productImage} />

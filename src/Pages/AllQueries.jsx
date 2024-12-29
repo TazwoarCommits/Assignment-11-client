@@ -30,7 +30,7 @@ const AllQueries = () => {
                                 <button onClick={() => setGrid(3)} className="btn"><BsFillGrid3X3GapFill /></button>
                             </div>
                         </div>
-            <div>
+            <div className="my-12 md:my-24">
                 {
                     grid === 1 ?
 
