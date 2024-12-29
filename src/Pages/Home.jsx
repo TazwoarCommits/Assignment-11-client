@@ -2,12 +2,13 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import GridLayout from "../Components/LayOut/GridLayout";
 import MQ from "../assets/myQ.jpg"
+import givaway1 from "../assets/givaway1-2024.jpg"
 import 'aos/dist/aos.css';  // Import the AOS CSS styles
 import AOS from 'aos';      // Import AOS JavaScript
 
 AOS.init(
     {
-        duration : 2000
+        duration: 2000
     }
 )
 
@@ -25,6 +26,47 @@ const Home = () => {
                     {
                         slicedQueries.map((query, idx) => <GridLayout key={idx} query={query}></GridLayout>)
                     }
+                </div>
+            </div>
+            <div className="mt-12 md:mt-20 w-11/12 mx-auto">
+                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold">Our Events and giveaway</h2>
+                <div className="flex items-center justify-around">
+                    <div className="flex flex-col items-center justify-center h-full">
+                        <div>
+                            <img className="w-32 h-32 rounded-lg"
+                            src={givaway1} alt="" />
+                        </div>
+                        <div className="my-3">
+                            <p className="text-center">Get a chance to Iphone-16 Pro</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center h-full">
+                        <div>
+                            <img className="w-32 h-32 rounded-lg"
+                            src={givaway1} alt="" />
+                        </div>
+                        <div className="my-3">
+                            <p>Get a chance to Iphone-16 Pro</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center h-full">
+                        <div>
+                            <img className="w-32 h-32 rounded-lg"
+                            src={givaway1} alt="" />
+                        </div>
+                        <div className="my-3">
+                            <p>Get a chance to Iphone-16 Pro</p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center h-full">
+                        <div>
+                            <img className="w-32 h-32 rounded-lg"
+                            src={givaway1} alt="" />
+                        </div>
+                        <div className="my-3">
+                            <p>Get a chance to Iphone-16 Pro</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="mt-12 md:mt-20 w-11/12 mx-auto">
