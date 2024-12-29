@@ -1,6 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import GridLayout from "../Components/LayOut/GridLayout";
+import MQ from "../assets/myQ.jpg"
+import 'aos/dist/aos.css';  // Import the AOS CSS styles
+import AOS from 'aos';      // Import AOS JavaScript
+
+AOS.init(
+    {
+        duration : 2000
+    }
+)
 
 const Home = () => {
     const allQueries = useLoaderData();
@@ -16,6 +25,19 @@ const Home = () => {
                     {
                         slicedQueries.map((query, idx) => <GridLayout key={idx} query={query}></GridLayout>)
                     }
+                </div>
+            </div>
+            <div className="mt-12 md:mt-20 w-11/12 mx-auto">
+                <div data-aos="flip-left"
+                    className="hero h-[30vh] md:h-[30vh] relative">
+                    <img className="w-full h-[30vh] md:h-[30vh]"
+                        src={MQ} alt="" />
+                    <div className="hero-overlay bg-opacity-60"></div>
+                    <div className="hero-content text-neutral-content text-center">
+                        <div className="max-w-md">
+                            <Link to={""}><button className="btn text-base-200 bg-cyan-800 hover:bg-cyan-900/80">Post Your Query</button></Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

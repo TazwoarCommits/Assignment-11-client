@@ -50,7 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <Link to="/" ><p className="text-xl font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
+                    <Link to="/" ><p className="text-xl text-cyan-800 font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

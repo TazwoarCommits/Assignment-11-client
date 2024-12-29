@@ -12,3 +12,7 @@ a.active {
     padding-top: 3px;
     border-radius: 8px;
 }
+
+.img-container:hover p {
+    display: block ; 
+  }

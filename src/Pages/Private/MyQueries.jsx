@@ -41,7 +41,7 @@ const MyQueries = () => {
                 </div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
-                        <Link to="/post"><button className="btn btn-primary">Post Your Query</button></Link>
+                        <Link to="/post"><button className="btn text-base-200 bg-cyan-800 hover:bg-cyan-900/80">Post Your Query</button></Link>
                     </div>
                 </div>
             </div>

@@ -22,15 +22,15 @@ const AllQueries = () => {
 
     return (
         <div>
-             <div className="flex justify-between md:w-11/12 xl:w-9/12 mx-auto">
-                            <h1>Asked Queries</h1>
+             <div className="flex mt-8 justify-between md:w-11/12 xl:w-9/12 mx-auto">
+                            <h1>All Asked Queries</h1>
                             <div className="flex gap-2">
                                 <button onClick={() => setGrid(1)} className="btn"><FaList /></button>
                                 <button onClick={() => setGrid(2)} className="btn"><IoGrid /></button>
                                 <button onClick={() => setGrid(3)} className="btn"><BsFillGrid3X3GapFill /></button>
                             </div>
                         </div>
-            <div className="my-12 md:my-24">
+            <div className="my-12 md:my-16">
                 {
                     grid === 1 ?
 
