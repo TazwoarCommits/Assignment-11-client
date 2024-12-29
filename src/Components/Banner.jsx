@@ -10,7 +10,7 @@ const Banner = () => {
           <img
             src={banner1}
             className="w-full h-[300px] md:h-[500px] opacity-50" />
-            <p className="text-3xl md:text-5xl text-gray-800 font-bold absolute top-[50%] left-[25%]">Have anything to ask about a porduct ??</p>
+            <p className="hidden md:flex text-3xl md:text-5xl text-gray-800 font-bold absolute top-[50%] left-[25%]">Have anything to ask about a porduct ??</p>
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide4" className="btn btn-circle">❮</a>
             <a href="#slide2" className="btn btn-circle">❯</a>
@@ -20,7 +20,7 @@ const Banner = () => {
           <img
             src={banner2}
             className="w-full h-[300px] md:h-[500px] opacity-50" />
-            <p className="absolute  text-3xl md:text-5xl text-gray-800 font-bold top-[50%] right-[30%]">Get FeedBack on Your asked Questions</p>
+            <p className="hidden md:flex absolute text-3xl md:text-5xl text-gray-800 font-bold top-[50%] right-[30%]">Get FeedBack on Your asked Questions</p>
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide1" className="btn btn-circle">❮</a>
             <a href="#slide3" className="btn btn-circle">❯</a>
@@ -30,7 +30,7 @@ const Banner = () => {
           <img
             src={banner3}
             className="w-full h-[300px] md:h-[500px] opacity-50" />
-            <p className="absolute text-3xl md:text-5xl text-white font-bold top-[50%] right-[20%]">Recommend Others The Best Products for others</p>
+            <p className="hidden md:flex absolute text-3xl md:text-5xl text-white font-bold top-[50%] right-[20%]">Recommend Others The Best Products for others</p>
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide2" className="btn btn-circle">❮</a>
             <a href="#slide4" className="btn btn-circle">❯</a>

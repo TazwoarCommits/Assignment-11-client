@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import GridLayout from "../Components/LayOut/GridLayout";
-import MQ from "../assets/myQ.jpg"
+import MQ from "../assets/newYear.jpg"
 import givaway1 from "../assets/givaway1-2024.jpg"
 import givaway2 from "../assets/givaway2.jpg"
 import givaway4 from "../assets/givaway4.webp"
@@ -47,52 +47,52 @@ const Home = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="text-center my-8">
-                        <h3>AppleMania is Going on</h3>
-                        <p>Participate and Post Queries to Win the Giveaway</p>
+                    <div className="text-center mb- md:mb-12">
+                        <h3 className="text-xl md:text-2xl text-cyan-800">AppleMania is Going on</h3>
+                        <p className="text-cyan-900/80">Participate and Post Queries to Win the Giveaway</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-around">
                         <Link to={"#"}>
-                            <div className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up-right" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway3} alt="" />
                                 </div>
                                 <div className="my-3">
-                                    <p className="text-center">Get a chance to Iphone-16 Pro</p>
+                                    <p className="text-center">Win Apple vision pro</p>
                                 </div>
                             </div>
                         </Link>
                         <Link to={"#"}>
-                            <div className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up-right" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway2} alt="" />
                                 </div>
                                 <div className="my-3">
-                                    <p>Get a chance to Iphone-16 Pro</p>
+                                    <p>Win Macbook pro</p>
                                 </div>
                             </div>
                         </Link>
                         <Link>
-                            <div className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up-left" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway1} alt="" />
                                 </div>
                                 <div className="my-3">
-                                    <p>Get a chance to Iphone-16 Pro</p>
+                                    <p>Win a Iphone-16 Pro</p>
                                 </div>
                             </div>
                         </Link>
                         <Link>
-                            <div className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up-left" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway4} alt="" />
                                 </div>
                                 <div className="my-3">
-                                    <p>Get a chance to Iphone-16 Pro</p>
+                                    <p>Get a chance to Win Ipad mini</p>
                                 </div>
                             </div>
                         </Link>
