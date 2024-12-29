@@ -72,7 +72,7 @@ const RecTable = ({ rec, myRec ,setMyRec }) => {
             <td>
                 {recommendedProduct}
                 <br />
-                <span className="badge badge-ghost badge-sm">{recommendationReason.slice(0, 9)}</span>
+                <span className="badge badge-ghost badge-sm">{recommendationReason.slice(0,25)}</span>
             </td>
             <td>{createdAt}</td>
             <th>
