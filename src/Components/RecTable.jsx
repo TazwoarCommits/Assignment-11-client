@@ -2,6 +2,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import Swal from "sweetalert2";
 import { MdDelete } from "react-icons/md";
+import { format } from "date-fns";
 
 const RecTable = ({ rec, myRec ,setMyRec }) => {
     // {
@@ -20,6 +21,7 @@ const RecTable = ({ rec, myRec ,setMyRec }) => {
     //   }
 
     const { queryTitle, queryAuthorName, createdAt, recommendedProduct, recommendationReason, queryPhoto, _id, } = rec;
+     const formattedDate = format(new Date(createdAt), "yyyy-MM-dd hh:mm a");
 
     const handleDelete = (id) => {
 
@@ -74,7 +76,7 @@ const RecTable = ({ rec, myRec ,setMyRec }) => {
                 <br />
                 <span className="badge badge-ghost badge-sm">{recommendationReason.slice(0,25)}</span>
             </td>
-            <td>{createdAt}</td>
+            <td>{formattedDate}</td>
             <th>
                 <button onClick={() => handleDelete(_id)} className="btn btn-ghost text-xl"><MdDelete /></button>
             </th>
