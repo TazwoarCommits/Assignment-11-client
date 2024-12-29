@@ -15,7 +15,7 @@ const GoogleLogin = () => {
     }
 
     return (
-        <button className="btn bg-teal-400 hover:bg-teal-500  flex justify-center items-center gap-2 text-xl lg:text-2xl font-bold w-full px-3 py-2 rounded-lg"
+        <button className="btn bg-cyan-800 hover:bg-cyan-900/80 text-base-200 flex justify-center items-center gap-2 text-xl lg:text-2xl font-bold w-full px-3 py-2 rounded-lg"
         onClick={handleGoogleLogin}>
         <span className="text-blue-600"><FaGoogle></FaGoogle>
         </span>Login with Google</button>
