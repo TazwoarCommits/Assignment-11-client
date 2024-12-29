@@ -14,6 +14,7 @@ const Navbar = () => {
             user ? <>
                 <li><NavLink to='/my-Queries'>My Queries</NavLink></li>
                 <li><NavLink to='/my-Recommendations'>My Recommendations</NavLink></li>
+                <li><NavLink to="/recommended-for-me">For Me</NavLink></li>
             </>
                 : <li><NavLink to='/register'>Register</NavLink></li>
         }

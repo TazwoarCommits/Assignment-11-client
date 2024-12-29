@@ -54,7 +54,15 @@ const MyQueries = () => {
                     <button onClick={() => setGrid(3)} className="btn"><BsFillGrid3X3GapFill /></button>
                 </div>
             </div>
-            <div>
+            {
+                myPostedQueries.length === 0 ? 
+
+                <h1 className="my-12 md:my-20 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
+                >Post Your First Query</h1>
+
+                :
+
+                <div>
                 {
                     grid === 1 ?
 
@@ -86,6 +94,7 @@ const MyQueries = () => {
                         </div>
                 }
             </div>
+            }
         </div>
     );
 };

@@ -5,9 +5,11 @@ import Navbar from "../Components/Shared/Navbar";
 
 const MainLayOut = () => {
     return (
-        <div className="font-poppins h-screen">
+        <div className="font-poppins ">
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <main className="min-h-[calc(100vh-242px)]">
+                <Outlet></Outlet>
+            </main>
             <Footer></Footer>
         </div>
     );

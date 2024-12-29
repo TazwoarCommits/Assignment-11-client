@@ -70,9 +70,10 @@ const Details = () => {
     return (
         <div className="flex flex-col md:flex-row justify-between w-11/12 mx-auto md:gap-32">
             <div className="my-12 md:my-36 w-full mx-auto border-2 rounded-3xl bg-cyan-800">
-                <div className="flex items-center text-white rounded-3xl">
+                <div className="mx-4 flex flex-col md:flex-row items-center text-white rounded-3xl gap-4">
                     <div className="my-8">
-                        <img src={productImage} />
+                        <img className="w-40 h-44 rounded-lg"
+                        src={productImage} />
                     </div>
                     <div>
                         <div className="mb-4 flex items-center gap-2">

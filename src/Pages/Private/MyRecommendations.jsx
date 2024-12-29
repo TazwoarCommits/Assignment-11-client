@@ -21,9 +21,17 @@ const MyRecommendations = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center my-8 md:my-16 text-2xl md:text-4xl ">My Recommendations : {myRec.length}</h1>
+                <h1 className="text-center my-8 md:my-16 text-2xl md:text-4xl">My Recommendations : {myRec.length}</h1>
             </div>
-            <div className="overflow-x-auto">
+             {
+                myRec.length === 0 ? 
+
+                <h1 className="text-center my-12 md:my-20  mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
+                >You haven&apos;t Recommended Anything Yet</h1>
+
+                : 
+
+                <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}
                     <thead>
@@ -41,6 +49,7 @@ const MyRecommendations = () => {
                     </tbody>
                 </table>
             </div>
+             }
         </div>
     );
 };

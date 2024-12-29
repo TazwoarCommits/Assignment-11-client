@@ -23,7 +23,7 @@ const AllQueries = () => {
     return (
         <div>
              <div className="flex justify-between md:w-11/12 xl:w-9/12 mx-auto">
-                            <h1>Total Posted : {queries.length}</h1>
+                            <h1>Asked Queries</h1>
                             <div className="flex gap-2">
                                 <button onClick={() => setGrid(1)} className="btn"><FaList /></button>
                                 <button onClick={() => setGrid(2)} className="btn"><IoGrid /></button>
