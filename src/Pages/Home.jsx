@@ -6,6 +6,7 @@ import givaway1 from "../assets/givaway1-2024.jpg"
 import givaway2 from "../assets/givaway2.jpg"
 import givaway4 from "../assets/givaway4.webp"
 import givaway3 from "../assets/givaway3.jpg"
+import goal from "../assets/goal.jpg"
 import 'aos/dist/aos.css';  // Import the AOS CSS styles
 import AOS from 'aos';      // Import AOS JavaScript
 
@@ -23,7 +24,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className="mt-12 md:mt-20 w-11/12 mx-auto">
-                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold">Recently Asked Query</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold underline">Recently Asked Query</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
 
                     {
@@ -32,7 +33,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="mt-12 md:mt-20 w-11/12 mx-auto">
-                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold">Our Events and giveaway</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Events and giveaway</h2>
                 <div className="my-12 md:my-20 w-11/12 mx-auto">
                     <div data-aos="flip-left"
                         className="hero h-[30vh] md:h-[30vh] relative">
@@ -49,7 +50,7 @@ const Home = () => {
                 <div>
                     <div className="text-center mb- md:mb-12">
                         <h3 className="text-xl md:text-2xl text-cyan-800">AppleMania is Going on</h3>
-                        <p className="text-cyan-900/80">Participate and Post Queries to Win the Giveaway</p>
+                        <p className="text-cyan-900/80 text-sm ">Participate and Post Queries to Win the Giveaway</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-around">
                         <Link to={"#"}>
@@ -99,7 +100,25 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            <div className="my-12 md:my-20 w-11/12 mx-auto">
+                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Goal</h2>
+                <div className="flex flex-col-reverse md:flex-row items-center gap-12">
+                    <div>
+                        <p>At Ask-Me, our mission is to help you make confident purchasing decisions by providing personalized product recommendations. We aim to:</p>
+                        <ul className="list-inside list-disc">
+                            <li><span>Simplify Choices:</span> Cut through the clutter of endless options by offering tailored suggestions.</li>
+                            <li><span>Save Time and Money : </span> Help you find the best value products without hours of research</li>
+                            <li><span>Build Trust : </span>Provide unbiased and transparent recommendations based on expert analysis and user feedback.</li>
+                            <li><span>Empower Users : </span> Enable informed decisions with clear, concise, and reliable insights.</li>
+                        </ul>
+                        <p>Your satisfaction is our top priority, and we strive to make shopping easier, smarter, and more enjoyable for everyone.</p>
+                    </div>
+                    <div>
+                        <img className="w-96 h-80 rounded-xl"
+                        src={goal} alt="" />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

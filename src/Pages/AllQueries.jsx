@@ -55,7 +55,7 @@ const AllQueries = () => {
 
                         :
 
-                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-3`} md:w-11/12 xl:w-9/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
+                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-2 lg:grid-cols-3`} md:w-11/12 xl:w-9/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
                             {
                                 queries.map(query => <GridLayout key={query._id} query={query}></GridLayout>)
                             }
