@@ -103,8 +103,8 @@ const Home = () => {
             <div className="my-12 md:my-20 w-11/12 mx-auto">
                 <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Goal</h2>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12">
-                    <div className="w-1/2">
-                        <p>At Ask-Me, our mission is to help you make confident purchasing decisions by providing personalized product recommendations tailored to your unique preferences and needs. We understand that shopping can often feel overwhelming with countless options and conflicting reviews, which is why we strive to simplify the process. We Aim to :</p>
+                    <div className="md:w-1/2">
+                        <p>At Ask-Me, our mission is to help you make confident purchasing decisions by providing personalized product recommendations tailored to your unique preferences and needs.We Aim to :</p>
                         <ul className="m-3 list-inside list-disc">
                             <li><span>Simplify Choices:</span> Cut through the clutter of endless options by offering tailored suggestions.</li>
                             <li><span>Save Time and Money : </span> Help you find the best value products without hours of research</li>
@@ -113,7 +113,7 @@ const Home = () => {
                         </ul>
                         <p>Your satisfaction is our top priority, and we strive to make shopping easier, smarter, and more enjoyable for everyone.</p>
                     </div>
-                    <div className="w-1/2">
+                    <div className="md:w-1/2">
                         <img className="w-10/12 h-80 rounded-xl"
                         src={goal} alt="" />
                     </div>
