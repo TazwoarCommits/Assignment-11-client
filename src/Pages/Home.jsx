@@ -19,7 +19,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className="mt-12 md:mt-20 w-11/12 mx-auto">
-                <h2 className="my-8 md:16 text-center text-2xl md:text-4xl">Recently Asked Query</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold">Recently Asked Query</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center">
 
                     {
