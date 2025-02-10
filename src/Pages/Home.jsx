@@ -21,20 +21,20 @@ const Home = () => {
     const slicedQueries = allQueries.slice(0, 6);
 
     return (
-        <div>
+        <div className="w-11/12 mx-auto">
             <Banner></Banner>
-            <div className="mt-12 md:mt-20 w-11/12 mx-auto">
+            <div className="mt-12 md:mt-20 w-full mx-auto">
                 <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold underline">Recently Asked Query</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
 
                     {
                         slicedQueries.map((query, idx) => <GridLayout key={idx} query={query}></GridLayout>)
                     }
                 </div>
             </div>
-            <div className="mt-12 md:mt-20 w-11/12 mx-auto">
+            <div className="mt-12 md:mt-20 w-full mx-auto">
                 <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Events and giveaway</h2>
-                <div className="my-12 md:my-20 w-11/12 mx-auto">
+                <div className="my-12 md:my-20 w-full mx-auto">
                     <div data-aos="flip-left"
                         className="hero h-[30vh] md:h-[30vh] relative">
                         <img className="w-full h-[30vh] md:h-[30vh]"

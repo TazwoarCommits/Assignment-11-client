@@ -22,7 +22,7 @@ const AllQueries = () => {
 
     return (
         <div>
-             <div className="flex mt-8 justify-between md:w-11/12 xl:w-9/12 mx-auto">
+             <div className="flex mt-8 justify-between md:w-11/12 xl:w-11/12 mx-auto">
                             <h1 className="text-xl text-cyan-800">All Asked Queries</h1>
                             <div className="flex gap-2">
                                 <button onClick={() => setGrid(1)} className="btn"><FaList /></button>
@@ -55,7 +55,7 @@ const AllQueries = () => {
 
                         :
 
-                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-2 lg:grid-cols-3`} md:w-11/12 xl:w-9/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
+                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-2 lg:grid-cols-4`} md:w-11/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
                             {
                                 queries.map(query => <GridLayout key={query._id} query={query}></GridLayout>)
                             }

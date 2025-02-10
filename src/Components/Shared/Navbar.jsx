@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext/AuthContext";
 import 'animate.css';
 
@@ -8,15 +8,15 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/queries'>Queries</NavLink></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/queries'>Queries</Link></li>
         {
             user ? <>
-                <li><NavLink to='/my-Queries'>My Queries</NavLink></li>
-                <li><NavLink to='/my-Recommendations'>My Recommendations</NavLink></li>
-                <li><NavLink to="/recommended-for-me">For Me</NavLink></li>
+                <li><Link to='/my-Queries'>My Queries</Link></li>
+                <li><Link to='/my-Recommendations'>My Recommendations</Link></li>
+                <li><Link to="/recommended-for-me">For Me</Link></li>
             </>
-                : <li><NavLink to='/register'>Register</NavLink></li>
+                : <li><Link to='/register'>Register</Link></li>
         }
     </>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="font-poppins navbar">
+        <div className="font-poppins navbar text-cyan-900/80 font-semibold">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

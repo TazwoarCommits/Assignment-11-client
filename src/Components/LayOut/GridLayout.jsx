@@ -64,17 +64,17 @@ const GridLayout = ({ query, myPostedQueries, setMyPostedQueries }) => {
       }, []);
 
     return (
-        <div  data-aos="flip-up" className= "card card-compact mb:16 md:mb-24 bg-base-100 justify-items-center max-w-80 md:w-96 shadow-xl">
+        <div  data-aos="flip-up" className= "card card-compact mb:16 md:mb-24 bg-base-100 justify-items-center w-80 md:w-full shadow-xl">
             <figure>
-                <img className="w-full h-[220px] md:h-[300px]"
+                <img className="w-11/12 h-[220px] md:h-[300px]"
                     src={productImage} />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
-                <p>Posted On : {formattedDate}</p>
+                <p>{formattedDate}</p>
                 <p>Recommended By : {recommendCount} </p>
                 <div className="grid grid-cols-2 gap-2 lg:flex justify-between">
-                    <Link to={`/details/${_id}`} className="btn bg-gray-700 text-white"><span className="text-sm font-bold">{location.pathname === "/my-Queries" ? <p className="text-sm">Details</p> : <p className="text-sm">Recommend</p>}</span> <MdMore /></Link>
+                    <Link to={`/details/${_id}`} className="btn bg-cyan-900/90 hover:bg-cyan-900 text-white"><span className="text-sm font-bold">{location.pathname === "/my-Queries" ? <p className="text-sm">Details</p> : <p className="text-sm">Recommend</p>}</span> <MdMore /></Link>
                     <button className={location.pathname === "/my-Queries" ? "" : "hidden"}><Link to={`/update/${_id}`} className="btn bg-gray-700 text-white text-sm"><span className="text-sm font-bold">Edit</span><FaEdit /></Link></button>
                     <button onClick={() => handleDelete(_id)} className={location.pathname === "/my-Queries" ? "btn bg-gray-700 text-white text-sm" : "hidden"}><span className="text-sm font-bold">Delete</span><MdDelete /></button>
                 </div>
