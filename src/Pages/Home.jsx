@@ -21,7 +21,7 @@ const Home = () => {
     const slicedQueries = allQueries.slice(0, 6);
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-full md:w-11/12 mx-auto">
             <Banner></Banner>
             <div className="mt-12 md:mt-20 w-full mx-auto">
                 <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold underline">Recently Asked Query</h2>
@@ -54,7 +54,7 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-around">
                         <Link to={"#"}>
-                            <div data-aos="fade-up-right" className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway3} alt="" />
@@ -65,7 +65,7 @@ const Home = () => {
                             </div>
                         </Link>
                         <Link to={"#"}>
-                            <div data-aos="fade-up-right" className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway2} alt="" />
@@ -76,7 +76,7 @@ const Home = () => {
                             </div>
                         </Link>
                         <Link>
-                            <div data-aos="fade-up-left" className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway1} alt="" />
@@ -87,7 +87,7 @@ const Home = () => {
                             </div>
                         </Link>
                         <Link>
-                            <div data-aos="fade-up-left" className="flex flex-col items-center justify-center h-full">
+                            <div data-aos="fade-up" className="flex flex-col items-center justify-center h-full">
                                 <div>
                                     <img className="w-32 h-32 rounded-lg"
                                         src={givaway4} alt="" />
@@ -100,10 +100,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="my-12 md:my-20 w-11/12 mx-auto">
+            <div className="my-12 md:my-20 w-full mx-auto">
                 <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Goal</h2>
-                <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12">
-                    <div className="md:w-1/2">
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+                    <div className="md:w-1/2 mx-2">
                         <p>At Ask-Me, our mission is to help you make confident purchasing decisions by providing personalized product recommendations tailored to your unique preferences and needs.We Aim to :</p>
                         <ul className="m-3 list-inside list-disc">
                             <li><span>Simplify Choices:</span> Cut through the clutter of endless options by offering tailored suggestions.</li>
@@ -114,7 +114,7 @@ const Home = () => {
                         <p>Your satisfaction is our top priority, and we strive to make shopping easier, smarter, and more enjoyable for everyone.</p>
                     </div>
                     <div className="md:w-1/2">
-                        <img className="w-10/12 h-80 rounded-xl"
+                        <img className="w-full h-80 md:rounded-xl"
                         src={goal} alt="" />
                     </div>
                 </div>

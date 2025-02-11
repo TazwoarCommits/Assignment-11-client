@@ -32,7 +32,7 @@ const MyQueries = () => {
     return (
         <div>
             <div
-                className="hero h-[40vh] md:h-[60vh] w-11/12 mx-auto relative">
+                className="hero h-[40vh] md:h-[60vh] w-full md:w-11/12 mx-auto relative">
                 <img className="h-[40vh] md:h-[60vh]"
                     src={MQ} alt="" />
                 <div className="hero-overlay bg-opacity-60"></div>
@@ -48,7 +48,7 @@ const MyQueries = () => {
             <h1 className="my-10 md:my-16 text-2xl md:text-4xl text-center">Posted Query of &quot;{user.displayName}&quot;</h1>
             <div className="flex justify-between md:w-11/12 mx-auto">
                 <h1>Total Posted : {myPostedQueries.length}</h1>
-                <div className="flex gap-2">
+                <div className="flex gap-2 mb-8">
                     <button onClick={() => setGrid(1)} className="btn"><FaList /></button>
                     <button onClick={() => setGrid(2)} className="btn"><IoGrid /></button>
                     <button onClick={() => setGrid(3)} className="btn"><BsFillGrid3X3GapFill /></button>
@@ -87,7 +87,7 @@ const MyQueries = () => {
 
                         :
 
-                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-3`} md:w-11/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
+                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-2 lg:grid-cols-3`} md:w-11/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
                             {
                                 myPostedQueries.map(query => <GridLayout key={query._id} query={query} myPostedQueries={myPostedQueries} setMyPostedQueries={setMyPostedQueries}></GridLayout>)
                             }
