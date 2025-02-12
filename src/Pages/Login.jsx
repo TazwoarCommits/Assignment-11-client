@@ -39,6 +39,11 @@ const Login = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left max-w-96">
                     <Lottie animationData={AnimateLogin}></Lottie>
+                    <div className="text-center">
+                        <h3 className="text-xl text-cyan-800 font-semibold">Login As an existing user</h3>
+                        <p><span className="font-semibold">Email  : </span> tazwoarlives@gmail.com</p>
+                        <p><span className="font-semibold">Pass : </span> Aa123456</p>
+                    </div> 
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <h1 className="ml-4 md:ml-8 mt-4 text-3xl md:text-5xl font-bold">Login now!</h1>

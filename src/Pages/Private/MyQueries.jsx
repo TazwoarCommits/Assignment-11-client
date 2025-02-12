@@ -14,6 +14,7 @@ import Lottie from "lottie-react";
 const MyQueries = () => {
     const { user } = useContext(AuthContext);
     const [myPostedQueries, setMyPostedQueries] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [grid, setGrid] = useState(3);
 
     // console.log(user);
@@ -26,6 +27,7 @@ const MyQueries = () => {
     const fetchMyQueries = async () => {
         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/queries?email=${user.email}`)
         setMyPostedQueries(data);
+        setLoading(false); 
     }
 
 
@@ -37,7 +39,7 @@ const MyQueries = () => {
                     src={MQ} alt="" />
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="">
-                    <Lottie className="w-48 md:w-56 xl:w-96 absolute hidden md:flex top-[10%] xl:top-[10%] md:right-[40%]" animationData={animateQ}></Lottie>
+                    <Lottie className="w-48 md:w-56 xl:w-96 absolute hidden lg:flex top-[10%] xl:top-[10%] md:right-[40%]" animationData={animateQ}></Lottie>
                 </div>
                 <div className="hero-content text-neutral-content text-center">
                     <div className="max-w-md">
@@ -45,7 +47,7 @@ const MyQueries = () => {
                     </div>
                 </div>
             </div>
-            <h1 className="my-10 md:my-16 text-2xl md:text-4xl text-center">Posted Query of &quot;{user.displayName}&quot;</h1>
+            <h1 className="my-10 md:my-12 text-2xl md:text-4xl text-center">Posted Query of &quot;{user.displayName}&quot;</h1>
             <div className="flex justify-between md:w-11/12 mx-auto">
                 <h1>Total Posted : {myPostedQueries.length}</h1>
                 <div className="flex gap-2 mb-8">
@@ -55,45 +57,50 @@ const MyQueries = () => {
                 </div>
             </div>
             {
-                myPostedQueries.length === 0 ? 
+                myPostedQueries.length === 0 ?
 
-                <h1 className="my-12 md:my-20 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
-                >Post Your First Query</h1>
+                    <h1 className="my-12 md:my-12 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
+                    >Post Your First Query</h1>
 
-                :
+                    :
 
-                <div>
-                {
-                    grid === 1 ?
+                  <div>
+                     {
+                        loading ? <span className="loading loading-spinner loading-lg text-center"></span> :
+                        <div>
+                        {
+                            grid === 1 ?
 
-                        <div className="overflow-x-auto my-10 md:my-16">
-                            <table className="table w-10/12 mx-auto">
-                                <thead>
-                                    <tr>
-                                        <th>Sl. No </th>
-                                        <th>Title</th>
-                                        <th>Posted</th>
-                                        <th>Recommend Count</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                                <div className="overflow-x-auto my-10 md:my-16">
+                                    <table className="table w-10/12 mx-auto">
+                                        <thead>
+                                            <tr>
+                                                <th>Sl. No </th>
+                                                <th>Title</th>
+                                                <th>Posted</th>
+                                                <th>Recommend Count</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {
+                                                myPostedQueries.map((query, idx) => <List key={query._id} query={query} idx={idx}></List>)
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                :
+
+                                <div className={`grid ${grid == 2 ? `md:grid-cols-2 max-w-5xl` : `md:grid-cols-2 lg:grid-cols-3`} md:w-11/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
                                     {
-                                        myPostedQueries.map((query, idx) => <List key={query._id} query={query} idx={idx}></List>)
+                                        myPostedQueries.map(query => <GridLayout key={query._id} query={query} myPostedQueries={myPostedQueries} setMyPostedQueries={setMyPostedQueries}></GridLayout>)
                                     }
-                                </tbody>
-                            </table>
-                        </div>
-
-                        :
-
-                        <div className={`grid ${grid == 2 ? `md:grid-cols-2` : `md:grid-cols-2 lg:grid-cols-3`} md:w-11/12 mx-auto justify-items-center gap-y-10 gap-x-8`}>
-                            {
-                                myPostedQueries.map(query => <GridLayout key={query._id} query={query} myPostedQueries={myPostedQueries} setMyPostedQueries={setMyPostedQueries}></GridLayout>)
-                            }
-                        </div>
-                }
-            </div>
+                                </div>
+                        }
+                    </div>
+                     }
+                  </div>
             }
         </div>
     );
