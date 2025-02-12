@@ -40,7 +40,7 @@ const Login = () => {
                 <div className="text-center lg:text-left max-w-96">
                     <Lottie animationData={AnimateLogin}></Lottie>
                     <div className="text-center">
-                        <h3 className="text-xl text-cyan-800 font-semibold">Login As an existing user</h3>
+                        <h3 className="text-xl text-cyan-800  font-semibold">Login As an existing user</h3>
                         <p><span className="font-semibold">Email  : </span> tazwoarlives@gmail.com</p>
                         <p><span className="font-semibold">Pass : </span> Aa123456</p>
                     </div> 

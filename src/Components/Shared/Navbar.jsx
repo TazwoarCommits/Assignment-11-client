@@ -26,10 +26,10 @@ const Navbar = () => {
 
 
     return (
-        <div className="md:w-11/12 mx-auto font-poppins navbar text-cyan-900/80 font-semibold px-0">
+        <div className=" md:w-11/12 mx-auto font-poppins navbar text-cyan-900/80 font-semibold px-0">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <div tabIndex={0}  className="btn btn-ghost lg:hidden">
+                    <div tabIndex={0}  className="btn btn-ghost ml-0 pl-0 lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -50,7 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <Link to="/" ><p className="text-xl text-cyan-800 font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
+                    <Link to="/" ><p className="text-xl  text-cyan-800 font-bold md:text-3xl animate__animated animate__bounce animate__delay-1s">Ask Me</p></Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

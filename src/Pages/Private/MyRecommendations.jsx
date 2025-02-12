@@ -21,12 +21,12 @@ const MyRecommendations = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center my-8 md:my-12 text-2xl md:text-4xl">My Recommendations : {myRec.length}</h1>
+                <h1 className="text-center my-8 md:my-12 text-2xl md:text-4xl text-cyan-800 ">My Recommendations : {myRec.length}</h1>
             </div>
              {
                 myRec.length === 0 ? 
 
-                <h1 className="text-center my-12 md:my-20  mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
+                <h1 className="text-center my-12 md:my-20  mx-auto text-xl md:text-3xl font-semibold"
                 >You haven&apos;t Recommended Anything Yet</h1>
 
                 : 

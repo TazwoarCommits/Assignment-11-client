@@ -24,7 +24,7 @@ const Home = () => {
         <div className="w-full md:w-11/12 mx-auto">
             <Banner></Banner>
             <div className="mt-12 w-full mx-auto">
-                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-2xl md:text-4xl font-bold underline">Recently Asked Query</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800  text-center text-2xl md:text-4xl font-bold underline">Recently Asked Query</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
 
                     {
@@ -33,24 +33,24 @@ const Home = () => {
                 </div>
             </div>
             <div className="mt-12 w-full mx-auto">
-                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Events and giveaway</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800  text-center text-3xl md:text-4xl font-bold underline">Our Events and giveaway</h2>
                 <div className="my-12 md:my-20 w-full mx-auto">
                     <div data-aos="flip-left"
                         className="hero h-[30vh] md:h-[30vh] relative">
                         <img className="w-full h-[30vh] md:h-[30vh]"
                             src={MQ} alt="" />
-                        <div className="hero-overlay bg-opacity-60"></div>
+                        <div className="hero-overlay bg-opacity-60 dark:bg-opacity-20"></div>
                         <div className="hero-content text-neutral-content text-center">
                             <div className="max-w-md">
-                                <p><button className="px-8 py-2 rounded-xl text-base-200 bg-cyan-800 hover:bg-cyan-900/80">Upcoming New Year Events</button></p>
+                                <p><button className="px-8 py-2 rounded-xl text-base-200 bg-cyan-800 dark:bg-cyan-600">Upcoming New Year Events</button></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div className="text-center mb- md:mb-12">
-                        <h3 className="text-xl md:text-2xl text-cyan-800">AppleMania is Going on</h3>
-                        <p className="text-cyan-900/80 text-sm ">Participate and Post Queries to Win the Giveaway</p>
+                        <h3 className="text-xl md:text-2xl text-cyan-800 ">AppleMania is Going on</h3>
+                        <p className="text-cyan-900/80  text-sm ">Participate and Post Queries to Win the Giveaway</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:flex items-center justify-around">
                         <Link to={"#"}>
@@ -101,7 +101,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="my-12 md:my-20 w-full mx-auto">
-                <h2 className="my-8 md:my-20 text-cyan-800 text-center text-3xl md:text-4xl font-bold underline">Our Goal</h2>
+                <h2 className="my-8 md:my-20 text-cyan-800  text-center text-3xl md:text-4xl font-bold underline">Our Goal</h2>
                 <div className="flex flex-col-reverse md:flex-row items-center justify-between">
                     <div className="md:w-1/2 mx-2">
                         <p>At Ask-Me, our mission is to help you make confident purchasing decisions by providing personalized product recommendations tailored to your unique preferences and needs.We Aim to :</p>

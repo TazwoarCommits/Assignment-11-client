@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer className="mt-8 md:mt-16 flex justify-around footer bg-neutral text-neutral-content p-10">
+        <footer className="mt-8  md:mt-16 flex justify-around footer bg-neutral text-neutral-content p-10">
             <aside>
                 <svg
                     width="50"

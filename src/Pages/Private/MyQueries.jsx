@@ -14,7 +14,6 @@ import Lottie from "lottie-react";
 const MyQueries = () => {
     const { user } = useContext(AuthContext);
     const [myPostedQueries, setMyPostedQueries] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [grid, setGrid] = useState(3);
 
     // console.log(user);
@@ -27,7 +26,6 @@ const MyQueries = () => {
     const fetchMyQueries = async () => {
         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/queries?email=${user.email}`)
         setMyPostedQueries(data);
-        setLoading(false); 
     }
 
 
@@ -47,7 +45,8 @@ const MyQueries = () => {
                     </div>
                 </div>
             </div>
-            <h1 className="my-10 md:my-12 text-2xl md:text-4xl text-center">Posted Query of &quot;{user.displayName}&quot;</h1>
+            <h1 className="my-8 md:my-20 text-cyan-800  text-center text-2xl md:text-4xl font-bold underline"
+            >Posted Query of &quot;{user.displayName ? user.displayName : user.email.split("@")[0]}&quot;</h1>
             <div className="flex justify-between md:w-11/12 mx-auto">
                 <h1>Total Posted : {myPostedQueries.length}</h1>
                 <div className="flex gap-2 mb-8">
@@ -59,15 +58,11 @@ const MyQueries = () => {
             {
                 myPostedQueries.length === 0 ?
 
-                    <h1 className="my-12 md:my-12 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800"
-                    >Post Your First Query</h1>
+                    <h1 className="my-12 md:my-12 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800 ">Post Your First Query</h1>
 
                     :
 
-                  <div>
-                     {
-                        loading ? <span className="loading loading-spinner loading-lg text-center"></span> :
-                        <div>
+                    <div>
                         {
                             grid === 1 ?
 
@@ -99,8 +94,6 @@ const MyQueries = () => {
                                 </div>
                         }
                     </div>
-                     }
-                  </div>
             }
         </div>
     );

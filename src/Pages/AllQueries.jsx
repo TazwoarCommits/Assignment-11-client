@@ -22,8 +22,9 @@ const AllQueries = () => {
 
     return (
         <div>
+            <h1 className="my-8 md:my-20 text-cyan-800  text-center text-2xl md:text-4xl font-bold underline">All Posted Query</h1>
              <div className="flex mt-8 justify-between md:w-11/12 xl:w-11/12 mx-auto">
-                            <h1 className="text-xl text-cyan-800">All Asked Queries</h1>
+                            <h1 className="text-xl text-gray-300">Most recent</h1>
                             <div className="flex gap-2">
                                 <button onClick={() => setGrid(1)} className="btn"><FaList /></button>
                                 <button onClick={() => setGrid(2)} className="btn"><IoGrid /></button>
