@@ -14,6 +14,7 @@ import Lottie from "lottie-react";
 const MyQueries = () => {
     const { user } = useContext(AuthContext);
     const [myPostedQueries, setMyPostedQueries] = useState([]);
+    const [loading , setLoading] = useState(true) ; 
     const [grid, setGrid] = useState(3);
 
     // console.log(user);
@@ -24,8 +25,10 @@ const MyQueries = () => {
     }, [user]);
 
     const fetchMyQueries = async () => {
+        setLoading(true) ; 
         const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/queries?email=${user.email}`)
         setMyPostedQueries(data);
+        setLoading(false) ;
     }
 
 
@@ -56,6 +59,9 @@ const MyQueries = () => {
                 </div>
             </div>
             {
+                loading ? <div className="flex justify-center items-center"><span className="loading loading-spinner loading-lg"></span></div> :
+                <div>
+                    {
                 myPostedQueries.length === 0 ?
 
                     <h1 className="my-12 md:my-12 text-center mx-auto text-xl md:text-3xl font-semibold text-cyan-800 ">Post Your First Query</h1>
@@ -94,6 +100,8 @@ const MyQueries = () => {
                                 </div>
                         }
                     </div>
+            }
+                </div>
             }
         </div>
     );
