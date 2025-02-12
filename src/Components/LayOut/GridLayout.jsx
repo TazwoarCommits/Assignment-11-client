@@ -75,7 +75,7 @@ const GridLayout = ({ query, myPostedQueries, setMyPostedQueries }) => {
                 <p>Recommended By : {recommendCount} </p>
                 <div className="grid grid-cols-2 lg:grid-cols-3 justify-items-start gap-4">
                     <Link to={`/details/${_id}`} className="w-28 text-center flex items-center justify-center gap-1 py-2  rounded-md bg-cyan-900/90 hover:bg-cyan-900 text-white"><span className="text-sm font-bold">{location.pathname === "/my-Queries" ? <p className="text-sm">Details</p> : <p className="text-xs">Recommend</p>}</span> <MdMore /></Link>
-                    <button className={location.pathname === "/my-Queries" ? "" : "hidden"}><Link to={`/update/${_id}`} className="w-24 text-center flex justify-center items-center gap-1 p-2 border-2 border-cyan-900/80 dark:border-white/80 rounded-full text-cyan-900/80 dark:text-white text-sm"><span className="text-sm font-bold">Edit</span><FaEdit /></Link></button>
+                    <button className={location.pathname === "/my-Queries" ? "" : "hidden"}><Link to={`/update/${_id}`} className="w-24 text-center flex justify-center items-center gap-1 p-2 border-2 border-cyan-900/80 rounded-full text-cyan-900/80 text-sm"><span className="text-sm font-bold">Edit</span><FaEdit /></Link></button>
                     <button onClick={() => handleDelete(_id)} className={location.pathname === "/my-Queries" ? "w-24 flex justify-center items-center gap-1 p-2 border-2 border-red-500 rounded-full text-red-500 text-sm" : "hidden"}><span className="text-sm font-bold">Delete</span><MdDelete /></button>
                 </div>
             </div>
